@@ -104,6 +104,7 @@ Item {
                     id: serviceName
                     text: model.service
                     Layout.fillWidth: true
+                    color: theme.textColor
                 }
             }
         }
