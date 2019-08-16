@@ -39,4 +39,7 @@ For Arch Linux there is a package available via AUR: https://aur.archlinux.org/p
 * linux-glibc-devel
 * libqt5-qtbase-devel
 
-
+### Install and test
+kpackagetool5 -t Plasma/Applet --install plasma-systemd-1.2.1/plasmoid
+kpackagetool5 -t Plasma/Applet --upgrade plasma-systemd-1.2.1/plasmoid 
+plasmoidviewer --applet org.kde.systemd-control
