@@ -28,6 +28,7 @@ Item {
     id: root
     Layout.maximumHeight: view.contentHeight
     Layout.minimumHeight: view.contentHeight
+    Layout.minimumWidth: 200
 
     Component.onCompleted: {
         loadServices()
