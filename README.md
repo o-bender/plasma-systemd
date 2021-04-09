@@ -9,7 +9,22 @@ This is a simple plasma applet for KDE Plasma 5 to control systemd services. It 
 * system units and user units (--user)
 
 ### Prerequisite
-To work properly, you must be able to run `sudo systemctl` without password. Usually you can achieve this be editing `/etc/sudoers` with visudo.
+To work properly, you must be able to run `sudo systemctl` without password. Usually you can achieve this be editing `/etc/sudoers` with visudo and add:
+```
+pavel ALL=(ALL)NOPASSWD:/bin/systemctl
+```
+
+### Dependencies (Debian)
+```bash
+sudo apt install cmake linux-libc-dev build-essential extra-cmake-modules libkf5config-dev libkf5plasma-dev qt5-default qtdeclarative5-dev
+```
+
+### Dependencies (openSUSE)
+
+* cmake
+* extra-cmake-modules
+* linux-glibc-devel
+* libqt5-qtbase-devel
 
 ### Installation
 ```
@@ -20,24 +35,6 @@ make
 make install
 ```
 For Arch Linux there is a package available via AUR: https://aur.archlinux.org/packages/plasma5-applets-systemd/
-
-### Dependencies (Debian)
-
-* cmake
-* linux-libc-dev
-* build-essential
-* extra-cmake-modules
-* libkf5config-dev
-* libkf5plasma-dev
-* qt5-default
-* qtdeclarative5-dev
-
-### Dependencies (openSUSE)
-
-* cmake
-* extra-cmake-modules
-* linux-glibc-devel
-* libqt5-qtbase-devel
 
 ### Install and test
 ```
